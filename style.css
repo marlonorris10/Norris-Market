@@ -1,0 +1,311 @@
+/* Premium Norris Market Website */
+:root {
+  --sage: #9da38f;
+  --sage-dark: #56604d;
+  --olive: #737a68;
+  --cream: #f5efe4;
+  --ivory: #fffaf2;
+  --ink: #2f332c;
+  --soft: #e4d9c8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.65;
+}
+
+h1, h2, h3, .mini-brand {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  line-height: .98;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  color: var(--sage-dark);
+  margin: 0 0 22px;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--sage-dark);
+  margin: 0 0 16px;
+}
+
+p { margin-top: 0; }
+
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(86, 96, 77, .50), rgba(86, 96, 77, .50)),
+    url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=2000&q=85');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 7%;
+  text-align: center;
+}
+
+.top-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 7%;
+  z-index: 2;
+}
+
+.mini-brand {
+  font-size: 1.5rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.top-nav a {
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .76rem;
+  font-weight: 700;
+}
+
+.hero-logo {
+  width: min(720px, 92vw);
+  padding: 54px 40px;
+  border: 1px solid rgba(255,255,255,.75);
+  background: rgba(86, 96, 77, .30);
+  backdrop-filter: blur(4px);
+  border-radius: 34px;
+  box-shadow: 0 26px 80px rgba(0,0,0,.22);
+}
+
+.hero-logo h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: clamp(4rem, 10vw, 8rem);
+  letter-spacing: .08em;
+  margin: 8px 0;
+}
+
+.small-line {
+  text-transform: uppercase;
+  letter-spacing: .35em;
+  font-size: .85rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1.12rem;
+  margin: 28px auto 28px;
+  max-width: 520px;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 13px 24px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.button.light {
+  background: var(--ivory);
+  color: var(--sage-dark);
+  border: 1px solid var(--ivory);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .78rem;
+  color: var(--olive);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.light-text { color: var(--ivory); }
+
+main section { padding: 84px 7%; }
+
+.two-column {
+  display: grid;
+  grid-template-columns: .95fr 1.15fr;
+  gap: 60px;
+  background: var(--ivory);
+  align-items: center;
+}
+
+.two-column p { font-size: 1.06rem; }
+
+.feature {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  padding: 0;
+}
+
+.feature-card {
+  background: var(--sage);
+  color: white;
+  padding: 82px 9%;
+}
+
+.feature-card h2 { color: white; }
+
+.date {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.35rem;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.feature-copy {
+  background: var(--cream);
+  padding: 82px 9%;
+}
+
+.vendor-section {
+  text-align: center;
+  background: var(--ivory);
+}
+
+.center-text {
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  text-align: left;
+}
+
+.info-card {
+  border: 1px solid var(--soft);
+  background: var(--cream);
+  border-radius: 28px;
+  padding: 34px;
+}
+
+.info-card ul {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+
+.seeking-section {
+  text-align: center;
+  background: var(--cream);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 950px;
+  margin: 30px auto 0;
+}
+
+.tags span {
+  background: var(--ivory);
+  border: 1px solid var(--soft);
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-size: .9rem;
+}
+
+.faq-section {
+  background: var(--ivory);
+  text-align: center;
+}
+
+details {
+  max-width: 820px;
+  margin: 13px auto;
+  text-align: left;
+  background: var(--cream);
+  border: 1px solid var(--soft);
+  border-radius: 18px;
+  padding: 18px 22px;
+}
+
+summary {
+  color: var(--sage-dark);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.apply-section {
+  background: var(--sage-dark);
+  color: white;
+  text-align: center;
+}
+
+.apply-section h2 { color: white; }
+
+.apply-section p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact {
+  margin-top: 28px;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+footer {
+  background: var(--ink);
+  color: white;
+  text-align: center;
+  padding: 32px 7%;
+  font-size: .88rem;
+}
+
+footer p { margin: 5px 0; }
+
+@media (max-width: 880px) {
+  .top-nav {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hero-logo {
+    padding: 42px 24px;
+    margin-top: 70px;
+  }
+
+  .two-column,
+  .feature,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main section,
+  .feature-card,
+  .feature-copy {
+    padding: 58px 7%;
+  }
+}
